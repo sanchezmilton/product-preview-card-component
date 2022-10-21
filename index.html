@@ -28,28 +28,32 @@
   </style>
 </head>
 <body class="bg-[#f2ebe3] h-screen w-full p-5 flex flex-col">
-  <main class="aspect-[9/16] w-[300px] m-auto bg-white rounded-xl overflow-hidden">
-    <img class="aspect-[4/3]" src="./images/image-product-mobile.jpg" alt="Perfume">
-    <div class="p-5">
-      <div class="text-sm font-Montserrat font-medium text-[#6c7289] tracking-[.25em]">PERFUME</div>
-      <h1 class="">Gabrielle Essence Eau De Parfum</h1>
+  <main class="w-[300px] md:w-[600px] md:flex m-auto bg-white rounded-xl overflow-hidden">
+    <picture class="md:w-[450px]">
+      <source srcset="./images/image-product-desktop.jpg" media="(min-width: 768px)">
+      <source srcset="./images/image-product-mobile.jpg">
+      <img src="./images/image-product-mobile.jpg" alt="Perfume">
+    </picture>
+    <div class="p-5 md:w-[450px] flex flex-col justify-between">
+      <div class="text-[.65rem] font-Montserrat font-medium text-[#6c7289] tracking-[.3em] mb-2">PERFUME</div>
+      <h1 class="md:text-4xl text-3xl text-[#1c232b] font-Fraunces mb-3">Gabrielle Essence Eau De Parfum</h1>
     
-      <p>
+      <p class="md:leading-6 md:text-lg text-[.9rem] text-[#6c7289] mb-4">
         A floral, solar and voluptuous interpretation composed by Olivier Polge,
         Perfumer-Creator for the House of CHANEL.
       </p>
     
-      <div>
-        <h2>$149.99</h2>
-        <small>$169.99</small>
+      <div class="flex items-center gap-5 mb-3">
+        <h2 class="text-3xl font-Fraunces text-[#3d8168]">$149.99</h2>
+        <small class="text-[#6c7289] font-medium"><del>$169.99</del></small>
       </div>
-      <button class="">Add to Cart</button>
+      <button class="bg-[#3d8168] w-full rounded-md font-Montserrat mb-2 py-3 font-semibold text-white text-sm flex gap-2 justify-center"><img src="./images/icon-cart.svg" alt="">Add to Cart</button>
     </div>
   </main>
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/sanchezmilton" target="_blank">Milton Sánchez</a>.
   </footer>
 </body>
 </html>
